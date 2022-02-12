@@ -1,0 +1,34 @@
+rice=120
+oil=150
+cookies=70
+pulses=15
+bingo=15
+cname=input('enter custamer name:')
+rq=int(input('enter no.of rice packets:'))
+oq=int(input('enter no.of oil packets:'))
+cq=int(input('enter no.of cookies packets:'))
+plq=int(input('enter no.of pulses packets:'))
+bq=int(input('enter no.of bingo packets:'))
+cc=input('enter coupon code:')
+bill=(rice*rq)+(oil*oq)+(cookies*cq)+(pulses*plq)+(bingo*bq)
+if bill>5000:
+    if cc=='MYBILL':
+        dis=bill*10/100
+        tax=bill*18/100
+elif bill>3000:
+    if cc=='MYBILL':
+        dis=bill*8/100
+        tax=bill*10/100
+elif bill>2000:
+    if cc=='MYBILL':
+        dis=bill*5/100
+        tax=bill*18/100
+elif bill>1000:
+    if cc=='MYBILL':
+        dis=bill*3/100
+        tax=bill*18/100
+else:
+    print('Invalid coupon code')
+mainbill=bill-dis+tax
+print('bill amount:',mainbill)
+
